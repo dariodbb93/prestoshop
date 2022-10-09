@@ -4,7 +4,7 @@
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
-            <p class="text-white"> Powered by Dario Del Bel Belluz - Tutti i diritti riservati </p>
+            <p class="fw-bold text-white"> Powered by Dario Del Bel Belluz - Tutti i diritti riservati </p>
         </section>
     </div>
 </footer>
