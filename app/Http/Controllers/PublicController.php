@@ -25,7 +25,6 @@ class PublicController extends Controller
         $annuncio = Annuncio::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
-            'img'=>$request->file('img')->store('public/img'),
         ]);
 
         return view('caricato');
