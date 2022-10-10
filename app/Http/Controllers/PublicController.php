@@ -24,7 +24,7 @@ class PublicController extends Controller
         // $annuncio->title = $request->input('description');
         $annuncio = Annuncio::create([
             'title'=>$request->input('title'),
-            'description'=>$request->input('description')
+            'description'=>$request->input('description'),
         ]);
 
         return view('caricato');
