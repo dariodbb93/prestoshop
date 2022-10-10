@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\PublicController;
 
 /*
@@ -18,3 +19,10 @@ use App\Http\Controllers\PublicController;
 Route::get('/upload', [PublicController:: class, "upload"])->name("upload");
 Route::post('/storeAnnuncio', [PublicController:: class, "storeAnnuncio"])->name("storeAnnuncio");
 Route::get('/', [PublicController:: class, 'indexAnnunci'])->name('indexAnnunci');
+
+
+Route::get('/artisan/storage', function() {
+    $command = 'storage:link';
+    $result = Artisan::call($command);
+    return Artisan::output();
+});
