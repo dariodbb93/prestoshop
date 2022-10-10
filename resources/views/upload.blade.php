@@ -22,10 +22,6 @@
                         <label class="form-label fw-bolder"> Inserisci la descrizione </label>
                         <input type="text" class="form-control" name="description">
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-bolder"> Inserisci l'immagine </label>
-                        <input type="file" class="form-control" name="img" >
-                    </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
                 </form>
             </div>
