@@ -25,7 +25,7 @@ class AnnuncioRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'description' => 'required',
+            'description' => 'required'
 
         ];
     }
