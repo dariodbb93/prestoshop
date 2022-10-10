@@ -26,7 +26,6 @@ class AnnuncioRequest extends FormRequest
         return [
             'title' => 'required',
             'description' => 'required',
-            'img' => 'required|image'
 
         ];
     }
