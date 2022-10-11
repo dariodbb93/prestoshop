@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AnnuncioRequest;
-use App\Models\Annuncio;
+use App\Models\Upload;
 use Illuminate\Http\Request;
+use App\Http\Requests\Uploads;
+use App\Http\Requests\UploadsRequest;
+use App\Http\Requests\Uploads as RequestsUploads;
+
 
 
 
@@ -18,11 +21,8 @@ class PublicController extends Controller
         return view('upload');
     }
 
-    public function storeAnnuncio(AnnuncioRequest $request){
-        // $annuncio = new Annuncio();
-        // $annuncio->title = $request->input('title');
-        // $annuncio->title = $request->input('description');
-        $annuncio = Annuncio::create([
+    public function storeAnnuncio(Uploads $request){
+        $annuncio = Upload::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
         ]);
@@ -31,8 +31,8 @@ class PublicController extends Controller
 }
 
 public function indexAnnunci(){
-    $annuncios = Annuncio::all(); //mi prendi tutti gli oggetti di classe annuncio che hai
-    return view('welcome', compact('annuncios'));
+    $uploads = Upload::all(); //mi prendi tutti gli oggetti di classe annuncio che hai
+    return view('welcome', compact('uploads'));
 
 
 }

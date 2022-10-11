@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Annuncio extends Model
+class Upload extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'title', 'description', 'img'
-    ];
-
+    protected $fillable = ['title', 'description'];
 }
