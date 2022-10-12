@@ -10,11 +10,17 @@ use App\Http\Requests\Uploads as RequestsUploads;
 
 
 
-
 class PublicController extends Controller
 {
     public function welcome() {
         return view('welcome');
+    }
+
+
+    public function __construct()
+
+    {
+        $this->middleware('auth')->except('indexAnnunci', 'welcome');
     }
 
     public function upload() {

@@ -15,7 +15,6 @@ use App\Http\Controllers\PublicController;
 |
 */
 
-// Route::get('/', [PublicController:: class, "welcome"])->name("welcome");
 Route::get('/upload', [PublicController:: class, "upload"])->name("upload");
 Route::post('/storeAnnuncio', [PublicController:: class, "storeAnnuncio"])->name("storeAnnuncio");
 Route::get('/', [PublicController:: class, 'indexAnnunci'])->name('indexAnnunci');
