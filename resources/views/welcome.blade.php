@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             @foreach ($uploads as $item)
                 <div class="col-12 col-md-6 d-flex justify-content-center">

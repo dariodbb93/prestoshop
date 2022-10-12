@@ -17,7 +17,7 @@
 
     <x-header> </x-header>
 
-    <div class=" container-fluid texture min-vh-100">
+    <div class=" container-fluid texture min-vh-100 p-0 m-0">
         {{ $slot }}
     </div>
 
