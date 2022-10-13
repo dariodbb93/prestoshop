@@ -22,6 +22,10 @@
                         <label class="form-label fw-bolder"> Inserisci la descrizione </label>
                         <input type="text" class="form-control" name="description">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bolder"> Inserisci il prezzo </label>
+                        <input type="text" class="form-control" name="price">
+                    </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
                 </form>
             </div>

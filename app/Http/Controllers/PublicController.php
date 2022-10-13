@@ -12,7 +12,8 @@ use App\Http\Requests\Uploads as RequestsUploads;
 
 class PublicController extends Controller
 {
-    public function welcome() {
+    public function welcome()
+    {
         return view('welcome');
     }
 
@@ -20,37 +21,35 @@ class PublicController extends Controller
     public function __construct()
 
     {
-        $this->middleware('auth')->except('indexAnnunci', 'welcome');
+        $this->middleware('auth')->except('indexAnnunci', 'welcome', 'details');
     }
 
-    public function upload() {
+    public function upload()
+    {
         return view('upload');
     }
 
-    public function storeAnnuncio(Uploads $request){
+    public function storeAnnuncio(Uploads $request)
+    {
         $annuncio = Upload::create([
-            'title'=>$request->input('title'),
-            'description'=>$request->input('description'),
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'price' => $request->input('price')
         ]);
 
         return view('caricato');
+    }
+
+    public function indexAnnunci()
+    {
+        $uploads = Upload::all(); //mi prendi tutti gli oggetti di classe annuncio che hai
+        return view('welcome', compact('uploads'));
+    }
+
+    public function details(Upload $upload)
+    {
+ 
+        return view('details', compact('upload'));
+   
+    }
 }
-
-public function indexAnnunci(){
-    $uploads = Upload::all(); //mi prendi tutti gli oggetti di classe annuncio che hai
-    return view('welcome', compact('uploads'));
-
-
-}
-
-
-
-
-
-
-
-
-
-}
-
-
