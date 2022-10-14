@@ -19,3 +19,5 @@ Route::get('/upload', [PublicController:: class, "upload"])->name("upload");
 Route::post('/storeAnnuncio', [PublicController:: class, "storeAnnuncio"])->name("storeAnnuncio");
 Route::get('/', [PublicController:: class, 'indexAnnunci'])->name('indexAnnunci');
 Route::get('/indexAnnunci/{upload}', [PublicController:: class, 'details'])->name('details');
+Route::get('/edit/{upload}', [PublicController:: class, 'edit'])->name('edit');
+Route::put('/update/{upload}', [PublicController:: class, 'update'])->name('update');

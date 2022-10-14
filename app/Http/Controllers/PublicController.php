@@ -52,4 +52,34 @@ class PublicController extends Controller
         return view('details', compact('upload'));
    
     }
+
+
+public function edit(Upload $upload){
+
+    return view('.edit', compact('upload'));
+
+}
+
+
+public function update(Upload $upload, Request $request){
+
+$upload->update([
+  
+   
+        'title'=>$request->title,
+        'description'=>$request->description,
+        'price'=>$request->price
+
+]
+);
+
+
+    return view('caricato');
+
+
+}
+
+
+
+
 }

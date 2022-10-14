@@ -8,7 +8,8 @@
                         <div class="card-body cardBackground p-4 ">
                             <h5 class="fw-bolder"> {{ $upload->title }} </h5>
                             <p class="card-text"> {{ $upload->description }} </p>
-                            <a href="{{route('details', compact('upload'))}}" class="btn btn-dark">Prezzo articolo</a>
+                            <a href="{{route('details', compact('upload'))}}" class="btn btn-dark mt-1">Prezzo articolo</a>
+                            <a href="{{route('edit', compact('upload'))}}" class="btn btn-dark mt-1">Modifica inserzione</a>
                         </div>
                     </div>
                 </div>
