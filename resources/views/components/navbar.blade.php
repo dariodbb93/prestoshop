@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('indexAnnunci') }}"> presto shop online </a>
+                    <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('indexAnnunci') }}"> shop online </a>
                 </li>
                 @guest
                     <li class="nav-item">
@@ -21,12 +21,16 @@
                         <a class="btn btn-light mx-1 px-2 my-1" href=""> Benvenuto {{ Auth::user()->name }} </a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-light mx-1 px-2 my-1" href="{{route('upload') }}"> carica un annuncio </a>
+                        <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('upload') }}"> carica un annuncio </a>
                     </li>
-                    <a class=" btn btn-light mx-1 px-2 my-1" href="{{route('logout')}}"
+                    <a class=" btn btn-light mx-1 px-2 my-1" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();"> Logout </a>
-                    <form  id='logout-form' action="{{ route('logout') }}" method="POST" class="d-none" >
+                        document.getElementById('logout-form').submit();">
+                        Logout </a>
+                    <li class="nav-item">
+                        <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('about') }}"> about </a>
+                    </li>
+                    <form id='logout-form' action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
                 @endguest

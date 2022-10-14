@@ -79,6 +79,13 @@ $upload->update([
 
 }
 
+public function about(){
+
+    
+        return view('about');
+    
+    
+    }
 
 
 
