@@ -1,11 +1,11 @@
-<footer class=" footerBackground text-center text-dark">
+<footer class=" footerBackground text-center text-dark" id="footer">
     <!-- Grid container -->
     <div class="container p-4">
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
-            <p class="fw-bold"> Powered by Dario Del Bel Belluz - Tutti i diritti riservati </p>
-            <a href="https://www.linkedin.com/in/dario-del-bel-belluz-82364a205/">
+            <p class="fw-bold" id ="footerText"> Powered by Dario Del Bel Belluz - Tutti i diritti riservati </p>
+            <a id="icon" href="https://www.linkedin.com/in/dario-del-bel-belluz-82364a205/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="dark"
                     class="bi bi-linkedin" viewBox="0 0 16 16">
                     <path

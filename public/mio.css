@@ -46,7 +46,54 @@
 
 }
 
-.bordo{
 
-    border-radius: 7%;
+ /* Dark-Mode */
+
+.textureDark{
+
+    background-image: url('textureTransparent.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.507);
+
+}
+
+
+.cardBackgroundDark {
+    background-color: rgba(0, 0, 0, 0.76);
+    opacity: 0.75;
+}
+
+.headerBackgroundDark{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.footerBackgroundDark{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.backgroundContainerDark{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.navBackgroundDark{
+    background-color: rgba(0, 0, 0, 0.76);
+    opacity: 0.7;
+}
+
+
+.headerDark{
+    color:white;
+
+}
+
+.footerText{
+    color: white;
+
+}
+
+.iconText{
+    color: white;
+
 }

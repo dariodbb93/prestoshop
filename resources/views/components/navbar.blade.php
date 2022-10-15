@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navBackground">
+<nav class="navbar navbar-expand-lg navBackground" id="navDark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,6 +19,10 @@
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('about') }}"> About </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mx-1 px-2 my-1" onclick="changeTheme()"> Change-Theme </a>
+                    </li>
+
                 @else
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href=""> Benvenuto {{ Auth::user()->name }} </a>
@@ -36,6 +40,9 @@
                     <form id='logout-form' action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+                    <li class="nav-item">
+                        <a class="btn btn-light mx-1 px-2 my-1" onclick="changeTheme()"> Change-Theme </a>
+                    </li>
                 @endguest
             </ul>
         </div>
