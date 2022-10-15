@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('indexAnnunci') }}"> shop online </a>
+                    <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('indexAnnunci') }}"> Shop online </a>
                 </li>
                 @guest
                     <li class="nav-item">
