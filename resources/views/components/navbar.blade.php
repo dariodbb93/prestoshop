@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('login') }}"> Accedi </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('about') }}"> About </a>
+                    </li>
                 @else
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href=""> Benvenuto {{ Auth::user()->name }} </a>
@@ -23,13 +26,13 @@
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('upload') }}"> carica un annuncio </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('about') }}"> About </a>
+                    </li>
                     <a class=" btn btn-light mx-1 px-2 my-1" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         Logout </a>
-                    <li class="nav-item">
-                        <a class="btn btn-light mx-1 px-2 my-1" href="{{ route('about') }}"> about </a>
-                    </li>
                     <form id='logout-form' action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

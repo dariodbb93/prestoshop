@@ -22,3 +22,4 @@ Route::get('/indexAnnunci/{upload}', [PublicController:: class, 'details'])->nam
 Route::get('/edit/{upload}', [PublicController:: class, 'edit'])->name('edit');
 Route::put('/update/{upload}', [PublicController:: class, 'update'])->name('update');
 Route::get('/about', [PublicController:: class, 'about'])->name('about');
+Route::delete('/destroy/{upload}', [PublicController:: class, 'destroy'])->name('destroy');

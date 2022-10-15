@@ -21,7 +21,7 @@ class PublicController extends Controller
     public function __construct()
 
     {
-        $this->middleware('auth')->except('indexAnnunci', 'welcome', 'details');
+        $this->middleware('auth')->except('indexAnnunci', 'welcome', 'details', 'about');
     }
 
     public function upload()
@@ -35,6 +35,7 @@ class PublicController extends Controller
             'title' => $request->input('title'),
             'description' => $request->input('description'),
             'price' => $request->input('price')
+
         ]);
 
         return view('caricato');
@@ -87,6 +88,13 @@ public function about(){
     
     }
 
+    public function destroy(Upload $upload){
+        $upload->delete();
+
+        return redirect(route('indexAnnunci'));
+
+
+    }
 
 
 }
