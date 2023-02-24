@@ -16,15 +16,15 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label fw-bolder"> Inserisci il titolo </label>
-                        <input type="text" class="form-control" name="title">
+                        <input type="text" class="form-control" name="title" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bolder"> Inserisci la descrizione </label>
-                        <input type="text" class="form-control" name="description">
+                        <input type="text" class="form-control" name="description" required >
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bolder"> Inserisci il prezzo </label>
-                        <input type="text" class="form-control" name="price">
+                        <input type="text" class="form-control" name="price" required >
                     </div>
                     <button type="submit" class="btn btn-dark">Submit</button>
                 </form>
