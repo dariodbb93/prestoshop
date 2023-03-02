@@ -118,17 +118,9 @@ class PublicController extends Controller
         $collection = explode(",", $stringa);
 
 
-        $parole_filtrate = preg_grep('/[' . $query . ']{3}/i', $collection);
+        $parole_filtrate = preg_grep('/[' . $query . ']{6}/i', $collection);
         if (!empty($collection)) {
             return view("search", compact('parole_filtrate'));
-        } else {
-            echo "Nessuna parola contiene almeno 3 lettere cercate consecutive.";
         }
-
-
-
-        // return view("search", compact('arrayFiltrato'));
-
-
     }
 }
