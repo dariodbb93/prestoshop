@@ -22,7 +22,6 @@
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" onclick="changeTheme()"> Change-Theme </a>
                     </li>
-
                 @else
                     <li class="nav-item">
                         <a class="btn btn-light mx-1 px-2 my-1" href=""> Benvenuto {{ Auth::user()->name }} </a>
@@ -45,6 +44,14 @@
                     </li>
                 @endguest
             </ul>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid p-0 mx-1">
+                    <form class="d-flex" role="search" action="{{ route('search') }}" method="get">
+                        <input class="form-control me-2" type="search" placeholder="Ricerca parola chiave" name = "query">
+                        <button class="btn btn-secondary" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         </div>
     </div>
 </nav>
